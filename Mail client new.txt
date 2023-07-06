@@ -1,0 +1,13 @@
+import smtplib
+
+sender_email = "adithyan18fm@gmail.com"
+receiver_email = "adithyanfm@gmail.com"
+password = input(str("Enter your password : "))
+message = " Thiruvalluvaar"
+
+server = smtplib.SMTP('smtp.gmail.com',587)
+server.starttls()
+server.login(sender_email,password)
+print("login success")
+server.sendmail(sender_email,receiver_email,message)
+print("Email has been sent")
